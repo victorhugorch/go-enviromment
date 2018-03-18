@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  app:
+    image: golang:1.10-alpine3.7
+    container_name: go
+    volumes:
+      - "./src:/go/src/"
+    working_dir: /go/src/${PROJECT_NAME}/
+    command: go run main.go
